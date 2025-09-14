@@ -1,10 +1,11 @@
-import { RegistrationForm } from "@/components/registration/RegistrationForm";
+// app/communities/page.tsx
+import { CommunitiesSelection } from "@/components/communities/CommunitiesSelection";
 import { ThemeToggle } from "@/components/theme-toggle";
 import Image from "next/image";
 import Link from "next/link";
-import { Users } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
-export default function RegisterPage() {
+export default function CommunitiesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-yellow-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors">
       {/* Header */}
@@ -38,11 +39,11 @@ export default function RegisterPage() {
             {/* Navigation and Theme Toggle */}
             <div className="flex items-center space-x-2">
               <Link 
-                href="/pages/communities"
+                href="/"
                 className="flex items-center space-x-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors"
               >
-                <Users className="w-4 h-4" />
-                <span className="hidden sm:inline">Join Communities</span>
+                <ArrowLeft className="w-4 h-4" />
+                <span className="hidden sm:inline">Back to Registration</span>
               </Link>
               <ThemeToggle />
             </div>
@@ -51,17 +52,17 @@ export default function RegisterPage() {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-4 sm:py-8">
+      <main className="container mx-auto px-4 py-4 sm;:py-8">
         <div className="text-center mb-6 sm:mb-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 via-yellow-400 to-pink-600 bg-clip-text text-transparent">
-            Join the Innovation Journey
+            Join Our Communities
           </h2>
           <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm sm:text-base">
-            Register to become a member of the Science Innovators Club
+            Connect with like-minded innovators in your field of interest
           </p>
         </div>
 
-        <RegistrationForm />
+        <CommunitiesSelection />
       </main>
 
       {/* Footer */}
